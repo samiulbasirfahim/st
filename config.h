@@ -5,9 +5,15 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Terminess Nerd Font:size=22:antialias:=true:autohint=true";
-static int borderpx = 10;
+// static char *font = "Terminess Nerd Font:size=22:weight=500:antialias:=true:autohint=true";
+static char *font = "ComicShannsMono Nerd Font:size=22:antialias:=true:autohint=true";
+static int borderpx = 0;
 float alpha = 0.9;
+
+
+/* Kerning / character bounding-box multipliers */
+static float cwscale = 1.0;
+static float chscale = 1.0;
 
 
 /*
@@ -27,9 +33,6 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 /* identification sequence returned in DA and DECID */
 char *vtiden = "\033[?6c";
 
-/* Kerning / character bounding-box multipliers */
-static float cwscale = 1.0;
-static float chscale = 1.0;
 
 /*
  * word delimiter string
