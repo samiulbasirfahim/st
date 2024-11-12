@@ -2,11 +2,23 @@
 
 /*
  * appearance
- *
+ *  <-----</>----->
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
- */
-static char *font = "IosevkaTermSlab Nerd Font:size=22:antialias=true:autohint=true";
+ */ 
+static char *font = "IosevkaTermSlab Nerd Font:size=18:antialias=true:autohint=true:weight=10";
 static int borderpx = 0;
+
+
+
+
+
+/* Kerning / character bounding-box multipliers */
+static float cwscale = 1.0;
+static float chscale = 1.0;
+
+
+/* bg opacity */
+float alpha = 0.90;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -24,10 +36,6 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
 char *vtiden = "\033[?6c";
-
-/* Kerning / character bounding-box multipliers */
-static float cwscale = 1.0;
-static float chscale = 1.0;
 
 /*
  * word delimiter string
@@ -104,9 +112,6 @@ char *termname = "st-256color";
  *	stty tabs
  */
 unsigned int tabspaces = 8;
-
-/* bg opacity */
-float alpha = 0.8;
 
 /* Background opacity */
 float alpha_def;
@@ -230,7 +235,7 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
+	{ XK_ANY_MOD,           Button3, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
@@ -255,7 +260,7 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_s,           chgalpha,       {.f = -1} }, /* Decrease opacity */
 	{ MODKEY,               XK_a,           chgalpha,       {.f = +1} }, /* Increase opacity */
 	{ MODKEY,               XK_d,           chgalpha,       {.f =  0} }, /* Reset opacity */
-	{ MODKEY,               XK_minus,       zoom,           {.f = 3} },
+	{ MODKEY,               XK_minus,       zoom,           {.f = -3} },
 	{ MODKEY,               XK_equal,       zoom,           {.f = +3} },
 	{ MODKEY,               XK_0,           zoomreset,      {.f =  0} },
 	{ MODKEY,               XK_p,           kscrollup,      {.i = 3} },
