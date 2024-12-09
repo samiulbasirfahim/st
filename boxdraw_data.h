@@ -19,7 +19,6 @@
 /* For convenience, BDL/BDA/BBS/BDB are 1 bit each, the rest are enums */
 #define BDL (1<<8)   /* Box Draw Lines (light/double/heavy) */
 #define BDA (1<<9)   /* Box Draw Arc (light) */
-
 #define BBD (1<<10)  /* Box Block Down (lower) X/8 */
 #define BBL (2<<10)  /* Box Block Left X/8 */
 #define BBU (3<<10)  /* Box Block Upper X/8 */

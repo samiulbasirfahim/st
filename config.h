@@ -4,11 +4,11 @@
  * appearance
  *  <-----</>----->
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
- */ 
-static char *font = "IosevkaTermSlab Nerd Font:size=18:antialias=true:autohint=true:weight=10";
+ */
+
+
+static char *font = "Iosevka:size=17:antialias=true:autohint=true";
 static int borderpx = 0;
-
-
 
 
 
@@ -18,7 +18,7 @@ static float chscale = 1.0;
 
 
 /* bg opacity */
-float alpha = 0.90;
+float alpha = 0.95;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -61,6 +61,7 @@ int allowwindowops = 0;
  * near minlatency, but it waits longer for slow updates to avoid partial draw.
  * low minlatency will tear/flicker more, as it can "detect" idle too early.
  */
+
 static double minlatency = 2;
 static double maxlatency = 33;
 
@@ -190,7 +191,7 @@ ResourcePref resources[] = {
 		{ "tabspaces",    INTEGER, &tabspaces },
 		{ "cwscale",      FLOAT,   &cwscale },
 		{ "chscale",      FLOAT,   &chscale },
-		{ "alpha",        FLOAT,   &alpha },
+		/* { "alpha",        FLOAT,   &alpha }, */
 };
 
 /*
@@ -260,9 +261,9 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_s,           chgalpha,       {.f = -1} }, /* Decrease opacity */
 	{ MODKEY,               XK_a,           chgalpha,       {.f = +1} }, /* Increase opacity */
 	{ MODKEY,               XK_d,           chgalpha,       {.f =  0} }, /* Reset opacity */
-	{ MODKEY,               XK_minus,       zoom,           {.f = -3} },
-	{ MODKEY,               XK_equal,       zoom,           {.f = +3} },
-	{ MODKEY,               XK_0,           zoomreset,      {.f =  0} },
+	{ ControlMask,          XK_minus,       zoom,           {.f = -3} },
+	{ ControlMask,          XK_equal,       zoom,           {.f = +3} },
+	{ ControlMask,          XK_0,           zoomreset,      {.f =  0} },
 	{ MODKEY,               XK_p,           kscrollup,      {.i = 3} },
 	{ MODKEY,               XK_n,           kscrolldown,    {.i = -3} },
 };
