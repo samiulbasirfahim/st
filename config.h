@@ -7,7 +7,7 @@
  */
 
 
-static char *font = "Iosevka:size=17:antialias=true:autohint=true";
+static char *font = "VictorMono:size=18:antialias=true:autohint=true";
 static int borderpx = 0;
 
 
@@ -261,11 +261,11 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_s,           chgalpha,       {.f = -1} }, /* Decrease opacity */
 	{ MODKEY,               XK_a,           chgalpha,       {.f = +1} }, /* Increase opacity */
 	{ MODKEY,               XK_d,           chgalpha,       {.f =  0} }, /* Reset opacity */
-	{ ControlMask,          XK_minus,       zoom,           {.f = -3} },
-	{ ControlMask,          XK_equal,       zoom,           {.f = +3} },
-	{ ControlMask,          XK_0,           zoomreset,      {.f =  0} },
-	{ MODKEY,               XK_p,           kscrollup,      {.i = 3} },
-	{ MODKEY,               XK_n,           kscrolldown,    {.i = -3} },
+	{ MODKEY,          XK_minus,       zoom,           {.f = -3} },
+	{ MODKEY,          XK_equal,       zoom,           {.f = +3} },
+	{ MODKEY,          XK_0,           zoomreset,      {.f =  0} },
+	{ MODKEY,               XK_k,           kscrollup,      {.i = 3} },
+	{ MODKEY,               XK_j,           kscrolldown,    {.i = -3} },
 };
 
 /*
