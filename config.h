@@ -7,7 +7,7 @@
  */
 
 
-static char *font = "VictorMono:size=18:antialias=true:autohint=true";
+static char *font = "Rxen Sans:size=20:antialias=true:autohint=true";
 static int borderpx = 0;
 
 
@@ -18,7 +18,7 @@ static float chscale = 1.0;
 
 
 /* bg opacity */
-float alpha = 0.95;
+float alpha = 0.90;
 
 /*
  * What program is execed by st depends of these precedence rules:
