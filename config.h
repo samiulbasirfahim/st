@@ -7,7 +7,7 @@
  */
 
 
-static char *font = "RxenSans Nerd Font:size=20:antialias=true:autohint=true";
+static char *font = "Rxen Sans:size=20:style=italic";
 static int borderpx = 0;
 
 
