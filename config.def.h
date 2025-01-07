@@ -7,7 +7,7 @@
  */
 
 
-static char *font = "Rxen Sans:size=16:style=italic";
+static char *font = "Rxen Sans:size=18:style=italic";
 static int borderpx = 0;
 
 
